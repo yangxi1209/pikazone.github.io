@@ -60,8 +60,8 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href="/basic-knowledge-in-molecular-simulation.html"><h1>分子模拟中一些基本参量和方法(基本原理和技术细节, 持续更新)</h1></a>
-02 四月 2017
+            <a href="/physics-meets-machine-learning.html"><h1>Physics meets machine learning</h1></a>
+27 五月 2017
 
 by <a class="url fn" href="/author/yx.html">yx</a>
  
@@ -70,16 +70,54 @@ by <a class="url fn" href="/author/yx.html">yx</a>
  
         </div>
         
-        <div><p>structure factor S(q)
+        <div><p>最近AlphaGo与柯洁的对战又火了, youtube DeepMind视频地址:
+<a href="https://www.youtube.com/watch?v=hhWJ7ns79zg">柯洁对阵 AlphaGo：第三局 直播</a></p>
+<p>知乎上关于物理与机器学习的专栏:
+<a href="https://zhuanlan.zhihu.com/p/25309182">当物理与机器学习相遇</a></p>
+<p>这个网页整理了很多关于物理与机器学习的论文:
+<a href="https://physicsml.github.io/pages/papers.html">https://physicsml.github.io/pages/papers.html</a></p>
+<p>机器学习与物理的结合能走多远, 还不是很清楚.
+上面的论文有一些发现, machine learning可以区分order和disorder的构型, 对此我觉得并不稀奇. 定义一些序参量, 可以捕捉到相变信号, 这是物理行当中一直在做的事. 可能想要捕捉一些复杂体系的转变, 序参量难以定义时, 可以考虑尝试机器学习. </p>
+<p>看新闻报道里说, 
+围棋棋盘是L=19, 19x19个格点, 考虑每个格点有两种状态, 这样总状态数是2^(19x19), 非常大, 而机器学习可以通过一些算法在其中找出最优的构型. 对此我觉得也不稀奇. 考虑统计物理里Ising model, Q-state Potts
+model的研究, 体系尺寸都已经做到了比19x19大得多, 而且还要考虑围棋上没有的周期性边界条件. 这些更大的体系, 现在都有Wang-Landau sampling/Multicanonical sampling来采样microcanonical density of states,
+并且可以reweighting到canonical ensemble, 充分(可能各态历经还需要再看看, 不过19x19的格点模型可能并不太难, 并且已经有更复杂体系确切数出基态的个数了, 比如Guangjie Shi, 2014 PRE研究了lattice HP polymer model)遍历体系的构型空间(microcanonical -&gt; canonical, multiple temperature)</p>
+<p>或许可以考虑计算一个3-state 19x19 model, 3 state 包括 黑棋, 白棋, 空闲 这3种状态. 相互作用参数可以模仿Ising model, 无周期性边界条件.
+可以WL计算这个模型的density of states, 并且rw到多个温度.
+还可以定义特定参量, 描述不同的构型, 这样可以将体系组态空间投影到特定自由能面上, 看随温度(能级)体系的状态的变化(棋局所处的状态对应到状态空间某个点, 有特定的热力学几率访问到).
+然后还可以考虑做动力学, 以连接不同热力学状态(下棋是动力学过程).</p>
+<p>然后可以根据围棋规则, 选出那些能获胜的最终帧, 并且从始态出发(19x19全为空, 或者有一个落子), 找通往这些获胜帧的transition path.
+可能想找到全部的态, 全部的transition path会比较困难(还没有尝试, 也没有系统查文献里的评论),
+但是可能找到其中的一些子集还是比较可行的.</p>
+<p>alphago可能找到的也是其中一些子集? mc决策树的查找, 也不是完备的?!</p>
+<p>可能想要遍历构型空间(或者transition path空间)中的全部点还是很难, 但是机器学习可能可以偏向地找出其中我们感兴趣的一个子集?</p></div>
+        <hr />
+    </div>
+		
+
+ 
+        
+
+ 
+
+    <div class='article'>
+        <a href="/basic-knowledge-in-molecular-simulation.html"><h2>分子模拟中一些基本参量和方法(基本原理和技术细节, 持续更新)</h2></a>
+        <div class= "well small"> 02 四月 2017
+
+by <a class="url fn" href="/author/yx.html">yx</a>
+ 
+
+
+ </div>
+        <div class="summary"><p>structure factor S(q)
 radial distribution function g(r)
 the relation between S(q) and g(r)</p>
 <p>mean square displacement
 diffusion constant D</p>
 <p>Umbrella Sampling</p>
-<p>transition path sampling</p></div>
-        <hr />
-    </div>
-		
+<p>transition path sampling</p> <a class="btn btn-info xsmall" href="/basic-knowledge-in-molecular-simulation.html">read more</a></div>
+    </div>	
+				
 
  
         
