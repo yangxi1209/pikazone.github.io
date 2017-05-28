@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>A Corner in the Complex World - GPU CUDA编程学习</title>
+    <title>A Corner in the Complex World - Authors</title>
     <meta name="description" content="">
-    <meta name="author" content="yx">
+    <meta name="author" content="Xi Yang">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -53,30 +53,12 @@
     <div class="row">
 
         <div class="span9">
-    <div class='article'>
-        <div class="content-title">
-            <h1>GPU CUDA编程学习</h1>
-03 三月 2017
+    <h1>Authors on A Corner in the Complex World</h1>
 
-by <a class="url fn" href="/author/yx.html">yx</a>
- 
-
-
-        </div>
-	
-        <div><p>2017/03/01</p>
-<p>CUDA的入门可以从这里开始
-(<a href="https://devblogs.nvidia.com/parallelforall/even-easier-introduction-cuda/">An Even Easier Introduction to
-CUDA</a>), 
-当然后继还是得看书:P</p>
-<p>2017/03/03</p>
-<p>继numba之后, 又发现一个python包支持cuda编程, 而且文档详细:
-PyCUDA <a href="https://documen.tician.de/pycuda/tutorial.html#getting-started">https://documen.tician.de/pycuda/tutorial.html#getting-started</a>
-PyCUDA简介看这个<a href="https://mathema.tician.de/software/pycuda/">个人blog网页</a>, 里面还有其它很多可看的页面. </p></div>
-	
-        <hr>
-
-    </div>
+    <ul>        <li><a href="/author/xi-yang.html">Xi Yang</a> (2)</li>
+        <li><a href="/author/yangxi.html">yangxi</a> (4)</li>
+        <li><a href="/author/yx.html">yx</a> (8)</li>
+    </ul>
         </div>
         
         <div class="span3">
