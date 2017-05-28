@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>A Corner in the Complex World - 3D建模</title>
+    <title>A Corner in the Complex World - artificial intelligence (AI)</title>
     <meta name="description" content="">
     <meta name="author" content="Xi Yang">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,95 +60,33 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href="/pov-rayxue-xi-bi-ji.html"><h1>POV-Ray学习笔记</h1></a>
-16 三月 2017
+            <a href="/alphago-related-things.html"><h1>AlphaGo related things</h1></a>
+28 五月 2017
 
-by <a class="url fn" href="/author/yangxi.html">yangxi</a>
+by <a class="url fn" href="/author/xi-yang.html">Xi Yang</a>
  
 
 
  
         </div>
         
-        <div><p><a href="http://www.povray.org/">POV-Ray</a>可以通过.pov建立对象并渲染, 最终输出图片. 
-通过POV-Ray, 可以批量处理, 渲染图片. 
-Youtube上有详细的POV-Ray入门教程, 可以一步一步地跟着敲代码调试.
-POV-Ray网站上有一些精彩的<a href="http://hof.povray.org/">示例</a>.
-可以通过.pov脚本建立非常复杂的场景并渲染.
-又比如网上搜到的一个例子:
-<img alt="img" src="imgs/test.png"></p>
-<p>通过下面几行代码生成(命令行输入povray test.pov):</p>
-<div class="highlight"><pre>// Code
-// render with +w500 +h500
-
-global_settings{assumed_gamma 2.2}
-
-#default{finish{ambient 1}}
-
-camera{
-  orthographic
-  right x*2 up y*2
-  location -z*100 look_at 0
-}
-
-#declare native_motif=
-pigment{
-  gradient y triangle_wave
-  #declare V=0;
-  #while(V&lt;1)
-   translate y*.75
-   rotate z*45.2
-   //rotate -z*45.1
-   scale .98
-   warp{repeat x*5 flip x}
-   #declare V=V+1/100;
-  #end
-  scale .1
-}
-
-plane{z,-1
-  pigment{
-   native_motif
-   color_map{[0 rgb 0][.5 rgb&lt;.5,.3,.1&gt;][1 rgb 1]}
-  }
-}
-
-// End Code
-</pre></div>
-
-
-<p>还不太清楚Blender能否与povray交互, 识别对方的文件.</p></div>
+        <div><p><a href="https://deepmind.com/research/alphago/alphago-vs-alphago-self-play-games/">AlphaGo自我学习棋谱公开(每天10盘, 共50盘)</a></p>
+<p><a href="https://deepmind.com/research/publications/">DeepMind publications</a></p>
+<p><a href="https://deepmind.com/research/dqn/">inside DeepMind (video)</a></p>
+<p><a href="https://deepmind.com/research/open-source/">DeepMind open source</a></p>
+<p><a href="https://deepmind.com/blog/open-sourcing-deepmind-lab/">open-sourcing DeepMind Lab</a> DeepMind Lab is a fully 3D game-like platform tailored for <strong>agent-based</strong> AI research. 
+('agent-based' -&gt; Netlogo?)</p>
+<p><a href="https://deepmind.com/blog/open-sourcing-sonnet/">TensorFlow, Sonnet(TensorFlow-based neural network library)</a>
+<a href="https://github.com/deepmind/sonnet">Sonnet Github page</a></p>
+<p><a href="https://github.com/deepmind/">DeepMine Github page (including several different repos)</a></p></div>
         <hr />
     </div>
 		
-
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="/blenderxue-xi-bi-ji.html"><h2>Blender学习笔记</h2></a>
-        <div class= "well small"> 15 三月 2017
-
-by <a class="url fn" href="/author/yangxi.html">yangxi</a>
- 
-
-
- </div>
-        <div class="summary"><ul>
-<li>2017-03-15 第1个project</li>
-</ul>
-<p>初试Blender, 按Youtube上的<a href="https://www.youtube.com/watch?v=ChPle-aiJuA">教程</a>做了一个小杯子:
-<img alt="img{60x60}" src="imgs/cup.samples-250.resize.png"></p>
-<p>完整的Blender文件及图片压缩包可以在<a href="https://github.com/yangxi1209/blender-learning/raw/master/blend-project.20170315.cup.tar.gz">这里</a>下载.</p> <a class="btn btn-info xsmall" href="/blenderxue-xi-bi-ji.html">read more</a></div>
-    </div>	
-				
 <div class="pagination">
 <ul>
     <li class="prev disabled"><a href="#">&larr; Previous</a></li>
 
-    <li class="active"><a href="/tag/3djian-mo.html">1</a></li>
+    <li class="active"><a href="/tag/artificial-intelligence-ai.html">1</a></li>
 
     <li class="next disabled"><a href="#">&rarr; Next</a></li>
 
