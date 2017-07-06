@@ -60,8 +60,8 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href="/ji-suan-mo-ni-de-ruan-jian-bao-fen-xi-cheng-xu-he-chang-yong-ku-sui-shou-geng-xin-ye-shi-gei-zi-ji-de-bei-wang.html"><h1>计算模拟的软件包, 分析程序和常用库 (随手更新, 也是给自己的备忘)</h1></a>
-01 五月 2017
+            <a href="/wl-changelog.html"><h1>wl changelog</h1></a>
+06 七月 2017
 
 by <a class="url fn" href="/author/yx.html">yx</a>
  
@@ -70,32 +70,47 @@ by <a class="url fn" href="/author/yx.html">yx</a>
  
         </div>
         
-        <div><p>Markov State Model (MSM): 
-PyEMMA
-现在的网址是: <a href="http://www.emma-project.org">http://www.emma-project.org</a></p>
-<p>MSMBuilder
-现在的网址是: <a href="http://msmbuilder.org">http://msmbuilder.org</a></p>
-<p>(补充:
-SimTk是一个好网站, 从上面可以找到大量正在开发的面向模拟的软件, 可以一淘.
-软件是否好用就得试一试了.)</p>
-<p>MSM相关, 好用的包(python):
-<a href="https://github.com/markovmodel">PyEMMA, msmtools, ...</a>
-<a href="https://msmtools.readthedocs.io">msmtools (low-level interface to basic algorithms, 适合自己调用)</a>
-<a href="">PyEMMA (high-level interface to MSM functionalities)</a>
-[MSMBuilder]</p>
-<p>Path sampling (python, 2016 开始在github上开发)
-或者官网:
-<a href="http://openpathsampling.org">http://openpathsampling.org</a>
-官网包含一些适合初学者的例子, 比如:
-<a href="http://openpathsampling.org/latest/examples/AD_tps.html">flexible length TPS on Alanine Dipeptide</a>
-非常值得一试\(^o^)/
-(开发者是:  Jan-Hendrik Prinz, David W.H. Swenson, John Chodera, Peter Bolhuis)</p>
-<p>其它有趣的东西:
-<a href="https://github.com/neozhaoliang/pywonderland.git">pywonderland</a>(包含代码, 从py脚本生成精美的图片. 可以学习PIL以及一些其它的Python包, 还有POV-RAY的python相关包的应用例子)</p>
-<p><a href="http://pmneila.github.io/jsexp/grayscott/">Reaction-diffusion systems</a></p></div>
+        <div><ul>
+<li>
+<p>2017/07/06
+发现wl cluster中的一个bug, 会使得pcf计算出现无穷大 NaN, 已找到方法避免, 但还没有发布最终版本程序.</p>
+</li>
+<li>
+<p>2017/03/20
+cluster-WL-code.add-single-particle-moves.20170320.tar.gz
+(lj2nn, 可用一个模板f90设定参数后编译出对应n的执行程序)</p>
+</li>
+<li>
+<p>2016/09/xx (2016/05/xx有一个eip初始化bug, 已经在2016/09/xx中修正)
+lj2nn wl chain sidmap (主要是homo, 但hetero也可用, 并且2016/09 修正了6-3 eip的一个初始化bug), 是多个独立的程序, 还没有改造成从一个模板f90编译</p>
+</li>
+<li>
+<p>2015/04/15
+wl chain hetero 程序
+(无完整sidmap功能, 但可计算基态百分数; 后继10-10程序可以计算最低10个能级的各态百分数. 功能有些记不清了, 回去仔细看当时的输出文件4-17-2015)</p>
+</li>
+</ul></div>
         <hr />
     </div>
 		
+
+ 
+        
+
+ 
+
+    <div class='article'>
+        <a href="/ji-suan-mo-ni-de-ruan-jian-bao-fen-xi-cheng-xu-he-chang-yong-ku-sui-shou-geng-xin-ye-shi-gei-zi-ji-de-bei-wang.html"><h2>计算模拟的软件包, 分析程序和常用库 (随手更新, 也是给自己的备忘)</h2></a>
+        <div class= "well small"> 01 五月 2017
+
+by <a class="url fn" href="/author/yx.html">yx</a>
+ 
+
+
+ </div>
+        <div class="summary"><p>记录自己感兴趣的计算软件工具, 未来可能学习使用. 人尽皆知的就不在这里记录了.</p> <a class="btn btn-info xsmall" href="/ji-suan-mo-ni-de-ruan-jian-bao-fen-xi-cheng-xu-he-chang-yong-ku-sui-shou-geng-xin-ye-shi-gei-zi-ji-de-bei-wang.html">read more</a></div>
+    </div>	
+				
 <div class="pagination">
 <ul>
     <li class="prev disabled"><a href="#">&larr; Previous</a></li>
