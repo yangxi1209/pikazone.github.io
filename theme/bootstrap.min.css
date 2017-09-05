@@ -608,3 +608,21 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 .hide{display:none;}
 .show{display:block;}
 .invisible{visibility:hidden;}
+
+
+#searchform { float: right; margin-top: 5px; margin-bottom: 5px }
+
+#searchbox {
+    background-color: #F5F4EF;
+    border: 1px solid #F5F4EF;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    height: 10px;
+    padding: 8px;
+    margin: 0px 15px;
+    vertical-align: top;
+}
+
+
+

@@ -18,6 +18,8 @@
     <link href="/theme/local.css" rel="stylesheet">
     <link href="/theme/pygments.css" rel="stylesheet">
 
+    <link href="/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+
     <!-- So Firefox can bookmark->"abo this site" -->
 
 </head>
@@ -43,6 +45,11 @@
             <li><a href="/pages/collectings.html">Collectings</a></li>
         </ul>
         </div>
+
+        <form id="searchform" action="/search" onsubmit="return (this.elements['q'].value.length > 0)">
+            <input id="searchbox" type="text" name="q" size="12" placeholder="Search">
+        </form>
+
         
     </div>
     </div>
