@@ -78,6 +78,24 @@ by <a class="url fn" href="/author/yx.html">yx</a>
         </div>
         
         <div><ul>
+<li>2017/11/23
+除了cluster-WL-code.fixed-cluster-pcf-bug.20170707.tar.gz 之外,
+其它的代码(之前的chain以及基于此, 最近开发的semiflexible chain),
+都有一个bug, 有时会产生错误:
+使得pcf 3d 的第三列为NaN<br>
+解决办法:<br>
+:::fortran
+sub calc_group_pcf 
+中:
+添加判断 sum_pcf_num_xx是否为0的if语句</li>
+</ul>
+<p>:::fortran
+if (sum_pcf_num_xx /= 0) then
+    do i=0, reachbin_idx(1)
+        pcf_xx(i) = dble(pcf_num_xx(i))/dble(sum_pcf_num_xx)
+    enddo
+endif</p>
+<ul>
 <li>
 <p>2017/07/06
 发现wl cluster中的一个bug, 会使得pcf计算出现无穷大 NaN, 已找到方法避免, 但还没有发布最终版本程序.</p>

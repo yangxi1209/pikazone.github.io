@@ -161,23 +161,27 @@ by <a class="url fn" href="/author/yx.html">yx</a>
 
  </div>
         <div class="summary"><ul>
+<li>2017/11/23
+除了cluster-WL-code.fixed-cluster-pcf-bug.20170707.tar.gz 之外,
+其它的代码(之前的chain以及基于此, 最近开发的semiflexible chain),
+都有一个bug, 有时会产生错误:
+使得pcf 3d 的第三列为NaN<br>
+解决办法:<br>
+:::fortran
+sub calc_group_pcf 
+中:
+添加判断 sum_pcf_num_xx是否为0的if语句</li>
+</ul>
+<p>:::fortran
+if (sum_pcf_num_xx /= 0) then
+    do i=0, reachbin_idx(1)
+        pcf_xx(i) = dble(pcf_num_xx(i))/dble(sum_pcf_num_xx)
+    enddo
+endif</p>
+<ul>
 <li>
 <p>2017/07/06
-发现wl cluster中的一个bug, 会使得pcf计算出现无穷大 NaN, 已找到方法避免, 但还没有发布最终版本程序.</p>
-</li>
-<li>
-<p>2017/03/20
-cluster-WL-code.add-single-particle-moves.20170320.tar.gz
-(lj2nn, 可用一个模板f90设定参数后编译出对应n的执行程序)</p>
-</li>
-<li>
-<p>2016/09/xx (2016/05/xx有一个eip初始化bug, 已经在2016/09/xx中修正)
-lj2nn wl chain sidmap (主要是homo, 但hetero也可用, 并且2016/09 修正了6-3 eip的一个初始化bug), 是多个独立的程序, 还没有改造成从一个模板f90编译</p>
-</li>
-<li>
-<p>2015/04/15
-wl chain hetero 程序
-(无完整sidmap功能, 但可计算基态百分数; 后继10-10程序可以计算最低10个能级的各态百分数 …</p></li></ul> <a class="btn btn-info xsmall" href="/wl-changelog.html">read more</a></div>
+发现wl cluster中的一个bug, 会使得pcf计算出现无穷大 …</p></li></ul> <a class="btn btn-info xsmall" href="/wl-changelog.html">read more</a></div>
     </div>	
 				
 
