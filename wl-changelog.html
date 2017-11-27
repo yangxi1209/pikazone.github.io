@@ -84,18 +84,19 @@ by <a class="url fn" href="/author/yx.html">yx</a>
 :::fortran<br>
 sub calc_group_pcf 
 中:
-添加判断 sum_pcf_num_xx是否为0的if语句</li>
+添加判断 sum_pcf_num_xx是否为0的if语句  </li>
 </ul>
-<p>:::fortran
-if (sum_pcf_num_xx /= 0) then
-    do i=0, reachbin_idx(1)
-        pcf_xx(i) = dble(pcf_num_xx(i))/dble(sum_pcf_num_xx)
-    enddo
-endif</p>
+<p>:::fortran<br>
+if (sum_pcf_num_xx /= 0) then<br>
+    do i=0, reachbin_idx(1)<br>
+        pcf_xx(i) = dble(pcf_num_xx(i))/dble(sum_pcf_num_xx)<br>
+    enddo<br>
+endif  </p>
 <ul>
 <li>
 <p>2017/07/06
-发现wl cluster中的一个bug, 会使得pcf计算出现无穷大 NaN, 已找到方法避免, 但还没有发布最终版本程序.</p>
+发现wl cluster中的一个bug, 会使得pcf计算出现无穷大 NaN, 已找到方法避免, 打包备份cluster-WL-code.fixed-cluster-pcf-bug.20170707.tar.gz<br>
+目前是一个基本的, 能跑起来, 结果正确与MD对照的cluster-WL程序. 未来还会在此基础上开发, 添加功能, 增大可算的尺寸.</p>
 </li>
 <li>
 <p>2017/03/20
