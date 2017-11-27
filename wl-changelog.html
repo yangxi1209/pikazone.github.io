@@ -72,7 +72,11 @@ by <a class="url fn" href="/author/yx.html">yx</a>
         </div>
 	
         <div><ul>
-<li>2017/11/23
+<li>
+<p>2017/11/27 笔记本上测试, fortran二维数组赋值(无论统一初值还是各个元素不一样的值), 统一向量化赋值不如双重循环快.  </p>
+</li>
+<li>
+<p>2017/11/23
 除了cluster-WL-code.fixed-cluster-pcf-bug.20170707.tar.gz 之外,
 其它的代码(之前的chain以及基于此, 最近开发的semiflexible chain),
 都有一个bug, 有时会产生错误:
@@ -84,7 +88,8 @@ by <a class="url fn" href="/author/yx.html">yx</a>
 :::fortran<br>
 sub calc_group_pcf 
 中:
-添加判断 sum_pcf_num_xx是否为0的if语句  </li>
+添加判断 sum_pcf_num_xx是否为0的if语句  </p>
+</li>
 </ul>
 <p>:::fortran<br>
 if (sum_pcf_num_xx /= 0) then<br>
