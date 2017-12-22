@@ -195,18 +195,15 @@ by <a class="url fn" href="/author/yx.html">yx</a>
  </div>
         <div class="summary"><ul>
 <li>
+<p>之前几乎所有的代码中,  count_num_tgt(i)的初始化都有bug, 此数组0:level_2nd, 初始化时却1:chainlength<br>
+之前并未暴露此bug, 因为只在prod时计算count_num_tgt, 虽然count_num_tgt初始化有bug, 但在声明count_num_tgt时即已初始化, 并且之前prod都只是跑一次迭代(iter.24), 所以此bug未暴露, 结果也未受影响.</p>
+</li>
+<li>
 <p>代码2017-12-15 v6之前的代码, 凡是包含array_xyz_in_wall(涉及到system under confinement体系的代码), 都需要修正初始化bug, 后果是move_pivot, crank_shaft在程序中几乎没有起作用,
 对结构的sampling效果可能差些. free chain代码中无此bug (不涉及in_wall相关的东西).   </p>
 </li>
 <li>
-<p>代码2017-11-28(也在开发中, 还未最终发布) 之前的涉及到WCA或者hardsphere的代码, 计算的coor, SID的结果不具有参考价值. 因为里面的if嵌套, 先 &lt; rc 再 &lt; rcut_coor, 但对WCA, hardsphere并不适用, 在2017-11-28 cell-list代码修改时, 对此处进行了修改, 改为两个独立if, 并且 dist &gt; 0 (默认pairdist设为-1.0).   </p>
-</li>
-<li>
-<p>2017/11/27 笔记本上测试, fortran二维数组赋值(无论统一初值还是各个元素不一样的值), 统一向量化赋值不如双重循环快.  </p>
-</li>
-<li>
-<p>2017/11/23
-除了cluster-WL-code.fixed-cluster-pcf-bug.20170707.tar.gz …</p></li></ul> <a class="btn btn-info xsmall" href="/wl-changelog.html">read more</a></div>
+<p>代码2017-11-28(也在开发中, 还未最终发布) 之前的涉及到WCA或者hardsphere的代码, 计算的coor, SID的结果不具有参考价值. 因为里面的if嵌套, 先 &lt; rc 再 &lt; rcut_coor, 但对WCA, hardsphere并不适用, 在2017-11-28 cell-list代码修改时, 对此处进行了修改, 改为两个独立if, 并且 dist &gt; 0 …</p></li></ul> <a class="btn btn-info xsmall" href="/wl-changelog.html">read more</a></div>
     </div>	
 				
 
