@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>A Corner in the Complex World - Archives</title>
+    <title>A Corner in the Complex World - 程序性能优化</title>
     <meta name="description" content="">
     <meta name="author" content="yx">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,99 +60,75 @@
     <div class="row">
 
         <div class="span9">
+    <div class='article'>
+        <div class="content-title">
+            <h1>程序性能优化</h1>
+23 九月 2017
 
-<h1>Archives</h1>
-
-<table class="table">
-    <tbody>
-        <tr>
-        <td>09 12月 2017</td>
-        <td><a href='/machinelearning-two-books.html'>两本Machine learning方面的书</a></td>
-        </tr>
-        <tr>
-        <td>23 9月 2017</td>
-        <td><a href='/code-optimization.html'>程序性能优化</a></td>
-        </tr>
-        <tr>
-        <td>18 8月 2017</td>
-        <td><a href='/event-driven-molecular-dynamics.html'>Event-Driven Molecular Dynamics</a></td>
-        </tr>
-        <tr>
-        <td>30 7月 2017</td>
-        <td><a href='/inkscape-notes.html'>Inkscape学习笔记</a></td>
-        </tr>
-        <tr>
-        <td>14 7月 2017</td>
-        <td><a href='/active-matter-bi-ji.html'>Active Matter 笔记</a></td>
-        </tr>
-        <tr>
-        <td>14 7月 2017</td>
-        <td><a href='/friend-help-gromacs-gaff.html'>Gromacs+GAFF力场计算有机分子组装 (友情赞助, 不断更新)</a></td>
-        </tr>
-        <tr>
-        <td>06 7月 2017</td>
-        <td><a href='/wl-changelog.html'>wl changelog</a></td>
-        </tr>
-        <tr>
-        <td>08 6月 2017</td>
-        <td><a href='/wo-de-shu-dan-chi-xu-geng-xin.html'>我的书单(持续更新)</a></td>
-        </tr>
-        <tr>
-        <td>29 5月 2017</td>
-        <td><a href='/lispxue-xi-bi-ji.html'>Lisp学习笔记</a></td>
-        </tr>
-        <tr>
-        <td>28 5月 2017</td>
-        <td><a href='/alphago-related-things.html'>AlphaGo related things</a></td>
-        </tr>
-        <tr>
-        <td>27 5月 2017</td>
-        <td><a href='/physics-meets-machine-learning.html'>Physics meets machine learning</a></td>
-        </tr>
-        <tr>
-        <td>01 5月 2017</td>
-        <td><a href='/ji-suan-mo-ni-de-ruan-jian-bao-fen-xi-cheng-xu-he-chang-yong-ku-sui-shou-geng-xin-ye-shi-gei-zi-ji-de-bei-wang.html'>计算模拟的软件包, 分析程序和常用库 (随手更新, 也是给自己的备忘)</a></td>
-        </tr>
-        <tr>
-        <td>02 4月 2017</td>
-        <td><a href='/basic-knowledge-in-molecular-simulation.html'>分子模拟中一些基本参量和方法(基本原理和技术细节, 持续更新)</a></td>
-        </tr>
-        <tr>
-        <td>21 3月 2017</td>
-        <td><a href='/trying-sphinx.html'>尝试Sphinx</a></td>
-        </tr>
-        <tr>
-        <td>16 3月 2017</td>
-        <td><a href='/pov-rayxue-xi-bi-ji.html'>POV-Ray学习笔记</a></td>
-        </tr>
-        <tr>
-        <td>15 3月 2017</td>
-        <td><a href='/blenderxue-xi-bi-ji.html'>Blender学习笔记</a></td>
-        </tr>
-        <tr>
-        <td>07 3月 2017</td>
-        <td><a href='/complexity-softwares.html'>Complexity</a></td>
-        </tr>
-        <tr>
-        <td>03 3月 2017</td>
-        <td><a href='/gpu-cudabian-cheng-xue-xi.html'>GPU CUDA编程学习</a></td>
-        </tr>
-        <tr>
-        <td>21 2月 2017</td>
-        <td><a href='/bo-ke-bei-wang.html'>博客备忘</a></td>
-        </tr>
-        <tr>
-        <td>21 2月 2017</td>
-        <td><a href='/ge-ren-bo-ke-shang-xian-liao.html'>个人博客上线了</a></td>
-        </tr>
-        <tr>
-        <td>20 2月 2017</td>
-        <td><a href='/ce-shi.html'>测试</a></td>
-        </tr>
-    </tbody>
-</table>
+by <a class="url fn" href="/author/yx.html">yx</a>
+ 
 
 
+        </div>
+	
+        <div><ul>
+<li>
+<p>我的经验<br>
+ifort 默认开启-O2选项;<br>
+ifort 编译时加上-xhost 可以利用当前处理器最优的指令集, 保证结果的前提下提升计算速度("This  option  tells  the compiler to generate instructions for the highest instruction set available on the compilation host processor");<br>
+ifort(2013) 编译代码时加上加上-vec-report 可以查看编译器对哪些代码做了向量优化(vectorized).  </p>
+</li>
+<li>
+<p>loop unrolling, vectorize<br>
+<a href="https://software.intel.com/en-us/articles/vectorization-essential">Vectorization Essentials</a>  </p>
+</li>
+</ul>
+<p><a href="https://software.intel.com/en-us/articles/fdiag15144">vectorization support: unroll factor set to xxxx</a><br>
+<a href="https://software.intel.com/en-us/articles/avoid-manual-loop-unrolling">Avoid Manual Loop Unrolling</a><br>
+<a href="https://software.intel.com/en-us/articles/vectorization-and-optimization-reports">Vectorization and Optimization Reports</a><br>
+<a href="https://software.intel.com/en-us/intel-fortran-compiler-auto-vectorization-tutorial">Tutorial: Using Auto Vectorization</a><br>
+<a href="https://software.intel.com/sites/default/files/managed/69/7e/4.4-pointer-aliasing-and-vectorization.pdf">pointer aliasing and vectorization</a><br>
+<a href="https://software.intel.com/en-us/articles/common-vectorization-tips">Common Vectorization Tips</a><br>
+<a href="https://software.intel.com/en-us/articles/random-number-function-vectorization">Random Number Function Vectorization</a>  </p>
+<ul>
+<li>内存对齐  </li>
+</ul>
+<p><a href="https://software.intel.com/en-us/articles/fortran-array-data-and-arguments-and-vectorization">Fortran Array Data and Arguments and Vectorization (a helpful post about alignment, vectorize, array, pointer)</a>
+<a href="https://software.intel.com/en-us/articles/data-alignment-to-assist-vectorization">Data Alignment to Assist Vectorization</a><br>
+<a href="https://software.intel.com/en-us/node/590536">Improving Performance by Aligning Data (Fortran)</a></p>
+<p><a href="http://www.cnblogs.com/this-543273659/archive/2011/07/18/2109665.html">C++内存对齐详解</a>  </p>
+<ul>
+<li>OpenMP, MPI  </li>
+</ul>
+<p><a href="http://www.openmp.org/resources/openmp-presentations/">www.openmp.org: Resources</a>  </p>
+<p><a href="https://hpc.llnl.gov/training/tutorials">llnl HPC online training materials</a>  </p>
+<p><a href="https://computing.llnl.gov/tutorials/openMP/#ProgrammingModel">OpenMP online tutorial</a><br>
+<a href="https://computing.llnl.gov/tutorials/openMP/exercise.html">OpenMP online tutorial: Exercise</a>  </p>
+<p><a href="http://www.cnblogs.com/yangyangcv/archive/2012/03/23/2413335.html">OpenMP的一点使用经验</a><br>
+<a href="http://www.cnblogs.com/me115/archive/2011/01/27/1946129.html">OpenMP reduction (can be used to calculate min, max of an array)</a><br>
+<a href="https://software.intel.com/zh-cn/forums/intel-moderncode-for-parallel-architectures/topic/345415">OpenMP Array Reduction in Fortran</a><br>
+<a href="http://www.cnblogs.com/China3S/p/3500132.html">cnblog: Fortran openmp并行计算编程: reduction</a></p>
+<p><a href="http://www.mcs.anl.gov/research/projects/mpi/tutorial/mpiintro/ppframe.htm">An Introduction to MPIParallel Programming with the message Passing Interface (online html with code)</a>  </p>
+<p>[Youtube YW Li Lecture III]</p>
+<ul>
+<li>GPU, CUDA Fortran, OpenACC 
+<a href="http://www.pgroup.com/lit/articles/insider/v2n1a4.htm">PGI: Tuning a Monte Carlo Algorithm on GPUs</a>  </li>
+</ul>
+<p><a href="http://bbs.gpuworld.cn/thread-687-1-1.html">Fortran下用OpenACC加速的11个编程技巧</a>  </p>
+<ul>
+<li>
+<p>C语言代码优化, 位运算实现乘, 除, 求2n方的余数  <br>
+<a href="http://www.cnblogs.com/feisky/archive/2009/10/23/1588815.html">C语言编程优化运行速度</a>  </p>
+</li>
+<li>
+<p>其它  </p>
+</li>
+</ul>
+<p><a href="https://software.intel.com/en-us/forums/intel-fortran-compiler-for-linux-and-mac-os-x/topic/500655">Does Fortran have an equivalent of memcpy in C? </a>  </p></div>
+	
+        <hr>
+
+    </div>
         </div>
         
         <div class="span3">

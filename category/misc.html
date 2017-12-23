@@ -67,8 +67,8 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href="/event-driven-molecular-dynamics.html"><h1>Event-Driven Molecular Dynamics</h1></a>
-18 八月 2017
+            <a href="/code-optimization.html"><h1>程序性能优化</h1></a>
+23 九月 2017
 
 by <a class="url fn" href="/author/yx.html">yx</a>
  
@@ -77,10 +77,81 @@ by <a class="url fn" href="/author/yx.html">yx</a>
  
         </div>
         
-        <div><p><a href="https://compphys.go.ro/event-driven-molecular-dynamics/">Event-Driven Molecular Dynamics</a></p></div>
+        <div><ul>
+<li>
+<p>我的经验<br>
+ifort 默认开启-O2选项;<br>
+ifort 编译时加上-xhost 可以利用当前处理器最优的指令集, 保证结果的前提下提升计算速度("This  option  tells  the compiler to generate instructions for the highest instruction set available on the compilation host processor");<br>
+ifort(2013) 编译代码时加上加上-vec-report 可以查看编译器对哪些代码做了向量优化(vectorized).  </p>
+</li>
+<li>
+<p>loop unrolling, vectorize<br>
+<a href="https://software.intel.com/en-us/articles/vectorization-essential">Vectorization Essentials</a>  </p>
+</li>
+</ul>
+<p><a href="https://software.intel.com/en-us/articles/fdiag15144">vectorization support: unroll factor set to xxxx</a><br>
+<a href="https://software.intel.com/en-us/articles/avoid-manual-loop-unrolling">Avoid Manual Loop Unrolling</a><br>
+<a href="https://software.intel.com/en-us/articles/vectorization-and-optimization-reports">Vectorization and Optimization Reports</a><br>
+<a href="https://software.intel.com/en-us/intel-fortran-compiler-auto-vectorization-tutorial">Tutorial: Using Auto Vectorization</a><br>
+<a href="https://software.intel.com/sites/default/files/managed/69/7e/4.4-pointer-aliasing-and-vectorization.pdf">pointer aliasing and vectorization</a><br>
+<a href="https://software.intel.com/en-us/articles/common-vectorization-tips">Common Vectorization Tips</a><br>
+<a href="https://software.intel.com/en-us/articles/random-number-function-vectorization">Random Number Function Vectorization</a>  </p>
+<ul>
+<li>内存对齐  </li>
+</ul>
+<p><a href="https://software.intel.com/en-us/articles/fortran-array-data-and-arguments-and-vectorization">Fortran Array Data and Arguments and Vectorization (a helpful post about alignment, vectorize, array, pointer)</a>
+<a href="https://software.intel.com/en-us/articles/data-alignment-to-assist-vectorization">Data Alignment to Assist Vectorization</a><br>
+<a href="https://software.intel.com/en-us/node/590536">Improving Performance by Aligning Data (Fortran)</a></p>
+<p><a href="http://www.cnblogs.com/this-543273659/archive/2011/07/18/2109665.html">C++内存对齐详解</a>  </p>
+<ul>
+<li>OpenMP, MPI  </li>
+</ul>
+<p><a href="http://www.openmp.org/resources/openmp-presentations/">www.openmp.org: Resources</a>  </p>
+<p><a href="https://hpc.llnl.gov/training/tutorials">llnl HPC online training materials</a>  </p>
+<p><a href="https://computing.llnl.gov/tutorials/openMP/#ProgrammingModel">OpenMP online tutorial</a><br>
+<a href="https://computing.llnl.gov/tutorials/openMP/exercise.html">OpenMP online tutorial: Exercise</a>  </p>
+<p><a href="http://www.cnblogs.com/yangyangcv/archive/2012/03/23/2413335.html">OpenMP的一点使用经验</a><br>
+<a href="http://www.cnblogs.com/me115/archive/2011/01/27/1946129.html">OpenMP reduction (can be used to calculate min, max of an array)</a><br>
+<a href="https://software.intel.com/zh-cn/forums/intel-moderncode-for-parallel-architectures/topic/345415">OpenMP Array Reduction in Fortran</a><br>
+<a href="http://www.cnblogs.com/China3S/p/3500132.html">cnblog: Fortran openmp并行计算编程: reduction</a></p>
+<p><a href="http://www.mcs.anl.gov/research/projects/mpi/tutorial/mpiintro/ppframe.htm">An Introduction to MPIParallel Programming with the message Passing Interface (online html with code)</a>  </p>
+<p>[Youtube YW Li Lecture III]</p>
+<ul>
+<li>GPU, CUDA Fortran, OpenACC 
+<a href="http://www.pgroup.com/lit/articles/insider/v2n1a4.htm">PGI: Tuning a Monte Carlo Algorithm on GPUs</a>  </li>
+</ul>
+<p><a href="http://bbs.gpuworld.cn/thread-687-1-1.html">Fortran下用OpenACC加速的11个编程技巧</a>  </p>
+<ul>
+<li>
+<p>C语言代码优化, 位运算实现乘, 除, 求2n方的余数  <br>
+<a href="http://www.cnblogs.com/feisky/archive/2009/10/23/1588815.html">C语言编程优化运行速度</a>  </p>
+</li>
+<li>
+<p>其它  </p>
+</li>
+</ul>
+<p><a href="https://software.intel.com/en-us/forums/intel-fortran-compiler-for-linux-and-mac-os-x/topic/500655">Does Fortran have an equivalent of memcpy in C? </a>  </p></div>
         <hr />
     </div>
 		
+
+ 
+        
+
+ 
+
+    <div class='article'>
+        <a href="/event-driven-molecular-dynamics.html"><h2>Event-Driven Molecular Dynamics</h2></a>
+        <div class= "well small"> 18 八月 2017
+
+by <a class="url fn" href="/author/yx.html">yx</a>
+ 
+
+
+ </div>
+        <div class="summary"><p><a href="https://compphys.go.ro/event-driven-molecular-dynamics/">Event-Driven Molecular Dynamics</a></p> <a class="btn btn-info xsmall" href="/event-driven-molecular-dynamics.html">read more</a></div>
+    </div>	
+				
 
  
         

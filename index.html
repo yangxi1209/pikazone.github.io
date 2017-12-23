@@ -103,6 +103,38 @@ by <a class="url fn" href="/author/yx.html">yx</a>
  
 
     <div class='article'>
+        <a href="/code-optimization.html"><h2>程序性能优化</h2></a>
+        <div class= "well small"> 23 九月 2017
+
+by <a class="url fn" href="/author/yx.html">yx</a>
+ 
+
+
+ </div>
+        <div class="summary"><ul>
+<li>
+<p>我的经验<br>
+ifort 默认开启-O2选项;<br>
+ifort 编译时加上-xhost 可以利用当前处理器最优的指令集, 保证结果的前提下提升计算速度("This  option  tells  the compiler to generate instructions for the highest instruction set available on the compilation host processor");<br>
+ifort(2013) 编译代码时加上加上-vec-report 可以查看编译器对哪些代码做了向量优化(vectorized).  </p>
+</li>
+<li>
+<p>loop unrolling, vectorize<br>
+<a href="https://software.intel.com/en-us/articles/vectorization-essential">Vectorization Essentials</a>  </p>
+</li>
+</ul>
+<p><a href="https://software.intel.com/en-us/articles/fdiag15144">vectorization support: unroll factor set to xxxx</a><br>
+<a href="https://software.intel.com/en-us/articles/avoid-manual-loop-unrolling">Avoid Manual Loop Unrolling</a><br>
+<a href="https://software.intel.com/en-us/articles/vectorization-and-optimization-reports">Vectorization and Optimization …</a></p> <a class="btn btn-info xsmall" href="/code-optimization.html">read more</a></div>
+    </div>	
+				
+
+ 
+        
+
+ 
+
+    <div class='article'>
         <a href="/event-driven-molecular-dynamics.html"><h2>Event-Driven Molecular Dynamics</h2></a>
         <div class= "well small"> 18 八月 2017
 
@@ -272,40 +304,13 @@ by <a class="url fn" href="/author/yx.html">yx</a>
 查找发现最近又有个PyTorch(说是更pythonic的东西, 但不清楚是否好用 …</p> <a class="btn btn-info xsmall" href="/alphago-related-things.html">read more</a></div>
     </div>	
 				
-
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="/physics-meets-machine-learning.html"><h2>Physics meets machine learning</h2></a>
-        <div class= "well small"> 27 五月 2017
-
-by <a class="url fn" href="/author/yx.html">yx</a>
- 
-
-
- </div>
-        <div class="summary"><p>最近AlphaGo与柯洁的对战又火了, youtube DeepMind视频地址:
-<a href="https://www.youtube.com/watch?v=hhWJ7ns79zg">柯洁对阵 AlphaGo：第三局 直播</a></p>
-<p>知乎上关于物理与机器学习的专栏:
-<a href="https://zhuanlan.zhihu.com/p/25309182">当物理与机器学习相遇</a></p>
-<p>这个网页整理了很多关于物理与机器学习的论文:
-<a href="https://physicsml.github.io/pages/papers.html">https://physicsml.github.io/pages/papers.html</a></p>
-<p>机器学习与物理的结合能走多远, 还不是很清楚.
-上面的论文有一些发现, machine learning可以区分order和disorder的构型, 对此我觉得并不稀奇. 定义一些序参量, 可以捕捉到相变信号, 这是物理行当中一直在做的事. 可能想要捕捉一些复杂体系的转变, 序参量难以定义时, 可以考虑尝试机器学习. </p>
-<p>看新闻报道里说, 
-围棋棋盘是L=19, 19x19个格点, 考虑每个格点有两种状态, 这样总状态数是2^(19x19), 非常大, 而机器学习可以通过一些算法在其中找出最优的构型. 对此我觉得也不稀奇. 考虑统计物理里Ising model, Q-state Potts
-model的研究, 体系尺寸都已经做到了比19x19大得多, 而且还要考虑围棋上没有的周期性边界条件. 这些更大的体系, 现在都有Wang-Landau sampling/Multicanonical …</p> <a class="btn btn-info xsmall" href="/physics-meets-machine-learning.html">read more</a></div>
-    </div>	
-				
 <div class="pagination">
 <ul>
     <li class="prev disabled"><a href="#">&larr; Previous</a></li>
 
     <li class="active"><a href="/index.html">1</a></li>
     <li class=""><a href="/index2.html">2</a></li>
+    <li class=""><a href="/index3.html">3</a></li>
 
     <li class="next"><a href="/index2.html">Next &rarr;</a></li>
 
