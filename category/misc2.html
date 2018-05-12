@@ -18,6 +18,8 @@
     <link href="/theme/local.css" rel="stylesheet">
     <link href="/theme/pygments.css" rel="stylesheet">
 
+    <link href="/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+
     <!-- So Firefox can bookmark->"abo this site" -->
 
 </head>
@@ -40,9 +42,14 @@
         <ul class="nav">
             
             <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/welcome.html">Welcome</a></li>
+            <li><a href="/pages/collectings.html">Collectings</a></li>
         </ul>
         </div>
+
+        <form id="searchform" action="/search" onsubmit="return (this.elements['q'].value.length > 0)">
+            <input id="searchbox" type="text" name="q" size="12" placeholder="Search">
+        </form>
+
         
     </div>
     </div>
@@ -116,6 +123,7 @@ $E=mc^2$</p>
                 Categories
                 </li>
                 
+                <li><a href="/category/books-zi-yuan-sou-ji.html">Books, 资源搜集</a></li>
                 <li><a href="/category/ke-yan.html">科研</a></li>
                 <li><a href="/category/machine-learning.html">machine learning</a></li>
                 <li><a href="/category/misc.html">Misc</a></li>
@@ -124,7 +132,6 @@ $E=mc^2$</p>
                 <li><a href="/category/statistical-physics-machine-learning.html">statistical physics, machine learning</a></li>
                 <li><a href="/category/tech.html">Tech</a></li>
                 <li><a href="/category/wo-de-shu-dan.html">我的书单</a></li>
-                <li><a href="/category/za-tan.html">杂谈</a></li>
                 <li><a href="/category/zhi-tu-jian-mo.html">制图建模</a></li>
                 <li><a href="/category/zi-yuan-sou-ji.html">资源搜集</a></li>
                    
@@ -139,8 +146,12 @@ $E=mc^2$</p>
                 </li>
             
                 <li><a href="https://www.complexityexplorer.org">Complexity Explorer</a></li>
-                <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                <li><a href="#">You can modify those links in your config file</a></li>
+                <li><a href="https://santafe.edu">Santa Fe Institute</a></li>
+                <li><a href="https://www.kitp.ucsb.edu">KITP UCSB</a></li>
+                <li><a href="http://kits.ucas.ac.cn">KITS</a></li>
+                <li><a href="https://compphys.go.ro">Computational Physics Blog with Code</a></li>
+                <li><a href="http://swarma.blog.caixin.com/">集智俱乐部博客</a></li>
+                <li><a href="https://computational-communication.com/about/">计算传播网</a></li>
             </ul>
             </div>
 
@@ -153,7 +164,9 @@ $E=mc^2$</p>
                 </li>
            
                 <li><a href="#">You can add links in your config file</a></li>
-                <li><a href="#">Another social link</a></li>
+                <li><a href="https://twitter.com/yangxi1209">@yangxi1209</a></li>
+                <li><a href="http://bymei.github.io">饼师妹</a></li>
+                <li><a href="http://jiaxm.me/">萌萌师弟</a></li>
             </ul>
             </div>
             </div>
@@ -166,6 +179,7 @@ $E=mc^2$</p>
 </footer>
 
 </div> <!-- /container -->
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="/theme/bootstrap-collapse.js"></script>
  
