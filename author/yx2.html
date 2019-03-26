@@ -68,6 +68,36 @@
  
 
     <div class='article'>
+        <a href="/wl-changelog.html"><h2>wl changelog</h2></a>
+        <div class= "well small"> 06 七月 2017
+
+by <a class="url fn" href="/author/yx.html">yx</a>
+ 
+
+
+ </div>
+        <div class="summary"><ul>
+<li>
+<p>2018/01/01 20180101的代码中, 优化了mc updates fraction, 删去不必要的mc update, 结果提升了采样效率(相同mcstep, energy traj变动更剧烈), 并且相比之前, 整个程序的收敛时间缩短了.<br>
+counr_num_tgt的初始化也改正了:<br>
+bak.free-semiflexible-hardsphere.20180101.tar.gz<br>
+bak.zaxisfree-semiflexible-hardsphere.20180101.tar.gz   </p>
+</li>
+<li>
+<p>之前几乎所有的代码中,  count_num_tgt(i)的初始化都有bug, 此数组0:level_2nd, 初始化时却1:chainlength<br>
+之前并未暴露此bug, 因为只在prod时计算count_num_tgt, 虽然count_num_tgt初始化有bug, 但在声明count_num_tgt时即已初始化, 并且之前prod都只是跑一次迭代(iter.24), 所以此bug未暴露, 结果也未受影响.</p>
+</li>
+<li>
+<p>代码2017-12-15 v6之前的代码, 凡是包含array_xyz_in_wall(涉及到system under confinement体系的代码), 都需要修正初始化bug …</p></li></ul> <a class="btn btn-info xsmall" href="/wl-changelog.html">read more</a></div>
+    </div>	
+				
+
+ 
+        
+
+ 
+
+    <div class='article'>
         <a href="/wo-de-shu-dan-chi-xu-geng-xin.html"><h2>我的书单(持续更新)</h2></a>
         <div class= "well small"> 08 六月 2017
 
@@ -275,24 +305,6 @@ CUDA</a>),
 <p>继numba之后, 又发现一个python包支持cuda编程, 而且文档详细:
 PyCUDA <a href="https://documen.tician.de/pycuda/tutorial.html#getting-started">https://documen.tician.de/pycuda/tutorial.html#getting-started</a>
 PyCUDA简介看这个<a href="https://mathema.tician.de/software/pycuda/">个人blog网页</a>, 里面还有其它很多可看的页面. </p> <a class="btn btn-info xsmall" href="/gpu-cudabian-cheng-xue-xi.html">read more</a></div>
-    </div>	
-				
-
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="/bo-ke-bei-wang.html"><h2>博客备忘</h2></a>
-        <div class= "well small"> 21 二月 2017
-
-by <a class="url fn" href="/author/yx.html">yx</a>
- 
-
-
- </div>
-        <div class="summary"><p>博客撰写及提交</p> <a class="btn btn-info xsmall" href="/bo-ke-bei-wang.html">read more</a></div>
     </div>	
 				
 <div class="pagination">
