@@ -68,6 +68,49 @@
  
 
     <div class='article'>
+        <a href="/pov-rayxue-xi-bi-ji.html"><h2>POV-Ray学习笔记</h2></a>
+        <div class= "well small"> 16 三月 2017
+
+by <a class="url fn" href="/author/yangxi.html">yangxi</a>
+ 
+
+
+ </div>
+        <div class="summary"><ul>
+<li><a href="http://www.povray.org/">POV-Ray</a>可以通过.pov建立对象并渲染, 最终输出图片. 
+通过POV-Ray, 可以批量处理, 渲染图片. 
+Youtube上有详细的POV-Ray入门教程, 可以一步一步地跟着敲代码调试.
+POV-Ray网站上有一些精彩的<a href="http://hof.povray.org/">示例</a>.
+可以通过.pov脚本建立非常复杂的场景并渲染.
+又比如网上搜到的一个例子:
+<img alt="img" src="imgs/test.png"></li>
+</ul>
+<p>通过下面几行代码生成(命令行输入povray test.pov):</p>
+<div class="highlight"><pre>// Code
+// render with +w500 +h500
+
+global_settings{assumed_gamma 2.2}
+
+#default{finish{ambient 1}}
+
+camera{
+  orthographic
+  right x*2 up y*2
+  location -z*100 look_at 0
+}
+
+#declare native_motif=
+pigment{
+  gradient y triangle_wave …</pre></div> <a class="btn btn-info xsmall" href="/pov-rayxue-xi-bi-ji.html">read more</a></div>
+    </div>	
+				
+
+ 
+        
+
+ 
+
+    <div class='article'>
         <a href="/blenderxue-xi-bi-ji.html"><h2>Blender学习笔记</h2></a>
         <div class= "well small"> 15 三月 2017
 
@@ -259,6 +302,7 @@ $E=mc^2$</p>
                 <li><a href="/category/misc.html">Misc</a></li>
                 <li><a href="/category/molecular-simulation-data-analysis-computational-toolkit.html">molecular simulation, data analysis, computational toolkit</a></li>
                 <li><a href="/category/programming.html">programming</a></li>
+                <li><a href="/category/python.html">python</a></li>
                 <li><a href="/category/statistical-physics-machine-learning.html">statistical physics, machine learning</a></li>
                 <li><a href="/category/tech.html">Tech</a></li>
                 <li><a href="/category/zhi-tu-jian-mo.html">制图建模</a></li>

@@ -73,6 +73,13 @@ by <a class="url fn" href="/author/yx.html">yx</a>
         </div>
 	
         <div><ul>
+<li>2019/11/04 (今日有两个重要发现) 1. (记住结论: 关于ratioree的误差, 提升perbin即可, 这可以放到prod去做, 当然mc move采样有硬伤perbin加大也很明显的case不行. 而norm阶段目标是快速准确得到DOS: 基于此,
+20180101 zaxisfree保持; 使用 20191103 reptate_tether(对这个体系, 本身ratioree不好采样, norm iter最后几次ratioree仍有涨落差异, 最终prod多跑几个样本计算error bar即可,
+想要进一步减小涨落只能未来考虑广义系综; 而且tether体系可以尝试不选w-3.0, 选w-5.0更好算而且要研究tether effect也更合理): 2019110x代码在最后几次迭代ratioree较为平滑一致的前提下, 哪个norm阶段收敛快用哪个. </li>
+<li>
+<p>此条在实战中有提升有降低, 据具体confine width而定, 不同width最优的mixMC ratio可能有差异. 计算结果中, iter ratioree有差异,
+20180101更稳定(其实也依赖于perbin,这样看, 虽然20180102总耗时更少, 但要达到同样的ratioree迭代稳定度, 20180102可能总耗时更多). 而rw Cv 两种代码差异不明显. 有些案例虽然单个mcstep耗时减少, 但每次iter的mcstep相对增多且更不稳定, 以后或可尝试适当增多mcstep中一些mv的次数, 可能单次耗时总的mcstep以及耗时反而减少. zaxisfree还是保持20180101代码, 只调mix_reptate数值还是不单独开一个新版本代码了) 发现可以调节mix_reptate ratio, 比如20191104 reptate_tether代码, mix_reptate 从N降到sqrt(N), 查看energy log发现采样效率反而提升, 而且计算用时更少. 赶紧试试对之前20180101 zaxisfree代码改进mix_reptate, 得到的20180102仅仅也是把mix_reptate 从N降到sqrt(N), 查看energy log发现也有类似效果, 棒! 而且vmd查看采样到的构象, 很容易就发现backfold Odijk结构, 棒! 之前mix_reptate=N时的结构反而皱皱巴巴的. 2. 发现对于tether体系写代码, 可以区分两种情形, 一种tether site, 还是可以用改进的reptate_tether明显提升采样效率, 再配合1中的mix_reptate优化. 另一种tether on plane, 或许就不能用reptate, 有待未来做到tether on plane时再试.  </p>
+</li>
 <li>
 <p>2018/01/01 20180101的代码中, 优化了mc updates fraction, 删去不必要的mc update, 结果提升了采样效率(相同mcstep, energy traj变动更剧烈), 并且相比之前, 整个程序的收敛时间缩短了.<br>
 counr_num_tgt的初始化也改正了:<br>
@@ -172,6 +179,7 @@ wl chain hetero 程序
                 <li><a href="/category/misc.html">Misc</a></li>
                 <li><a href="/category/molecular-simulation-data-analysis-computational-toolkit.html">molecular simulation, data analysis, computational toolkit</a></li>
                 <li><a href="/category/programming.html">programming</a></li>
+                <li><a href="/category/python.html">python</a></li>
                 <li><a href="/category/statistical-physics-machine-learning.html">statistical physics, machine learning</a></li>
                 <li><a href="/category/tech.html">Tech</a></li>
                 <li><a href="/category/zhi-tu-jian-mo.html">制图建模</a></li>
